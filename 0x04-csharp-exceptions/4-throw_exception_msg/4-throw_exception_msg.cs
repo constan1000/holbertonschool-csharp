@@ -1,9 +1,10 @@
-﻿using System;
+﻿
+using System;
 
-    class Except
+class Except
+{
+    public static void ThrowMsg(string msg)
     {
-        public static void ThrowMsg(string msg)
-        {
-            throw new Exception(msg);
-        }
+        throw new ArgumentException(msg);
     }
+}
