@@ -1,17 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 
-class  LList
+class LList
 {
-    public static int FindNode(LinkedList<int> myLList, int value)
-    {
+    public static int FindNode(LinkedList<int> myLList, int value){
         int index = 0;
-        foreach (var i in myLList)
-        {
-            if (i == value)
-               return (index);
+
+        foreach(var elem in myLList){
+            if (elem == value)
+                return index;
             index++;
         }
-        return (-1);
+        return -1;
     }
 }

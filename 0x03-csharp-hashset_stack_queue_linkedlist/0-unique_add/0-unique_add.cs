@@ -1,20 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 
-class  List
-{
-    public static int Sum(List<int> myList)
+    class List
     {
-        List<int> Ls = new List<int>();
-        foreach (var i in myList)
+    public static int Sum(List<int> myList)
         {
-            if (Ls.Contains(i))
-                continue;
-            Ls.Add(i);
+        List<int> newList = new List<int>();
+        int sum = 0;
+        foreach (var elem in myList)
+        {
+            if (! newList.Contains(elem))
+            {
+                newList.Add(elem);
+                sum += elem;
+            }
         }
-        int result = 0;
-        for (int i = 0; i < Ls.Count; i++)
-            result = result + Ls[i];
-        return (result);
+        return sum;
+        }
     }
-}
