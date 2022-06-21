@@ -1,6 +1,7 @@
 using NUnit.Framework;
+using MyMath;
 
-namespace MyMath.Tests
+namespace MyMath.tests
 {
     public class Tests
     {
@@ -10,14 +11,15 @@ namespace MyMath.Tests
         }
 
         [Test]
-        [TestCase(70, 0)]
-        [TestCase(100, -30)]
-        [TestCase(60, 10)]
-        [TestCase(68, 2)]
-        public void TestAdd(int val, int valb)
+        [TestCase(40, 10)]
+        [TestCase(37, 13)]
+        [TestCase(25, 25)]
+        [TestCase(50, 0)]
+        [TestCase(100, -50)]
+        public void SimpleAdditionOperations(int value, int valueb)
         {
-            var result = MyMath.Operations.Add(val, valb);
-            Assert.AreEqual(70, result);
+            var result = MyMath.Operations.Add(value, valueb);
+            Assert.AreEqual(50, result);
         }
     }
 }

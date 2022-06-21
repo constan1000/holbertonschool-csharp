@@ -1,20 +1,15 @@
 ﻿using System;
-/// <summary>
-/// Creating an operation class simple add ...
-/// </summary>
+
 namespace MyMath
 {
-    /// <summary>
-    /// the class of all operations
-    /// </summary>
+    /// <summary>Represents Mathemathics operations class.</summary>
     public class Operations
     {
-        /// the Add function
-        /// <param name="a">val a</param>
-        /// <param name="b"> val b</param>
-        /// <returns> a + b = int</returns>
-        public static int Add(int a, int b)
-        {
+        /// <summary> Makes a arithemetic operation (addition) </summary>
+        /// <param name="a">First integer for addition.</param>
+        /// <param name="b">Second integer for addition.</param>
+        /// <returns>Addition: a + b.</returns>
+        public static int Add(int a, int b){
             return a + b;
         }
     }
