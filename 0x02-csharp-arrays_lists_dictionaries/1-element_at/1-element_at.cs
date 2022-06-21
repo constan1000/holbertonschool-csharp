@@ -4,11 +4,11 @@ class Array
 {
     public static int elementAt(int[] array, int index)
     {
-        if (array.Length - 1 < index || index < 0)
+        if (index < 0 || index > array.Length - 1)
         {
             Console.WriteLine("Index out of range");
-            return (-1);
+            return -1;
         }
-        return (array[index]);
+        return array[index];
     }
 }

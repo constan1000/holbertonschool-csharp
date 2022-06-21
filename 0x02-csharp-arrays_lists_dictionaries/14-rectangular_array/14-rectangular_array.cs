@@ -1,29 +1,25 @@
 ﻿using System;
+using System.Text;
 
-namespace _14_rectangular_array
+class Program
 {
-    class Program
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
+        int[,] multiDim = new int[6, 5];
+        multiDim[2,2] = 1;
+        int x = 0;
+        var output = new StringBuilder();
+        foreach (var i in multiDim)
         {
-            for (int i = 0; i < 5; i++)
-            {
-                for (int j = 0; j < 5; j++)
-                {
-                    if (i == 2 && j == 2)
-                    {
-                        Console.Write("1 ");
-                        continue;
-                    }
-                    if (j == 4)
-                    {
-                        Console.Write("0");
-                        continue;
-                    }
-                    Console.Write("0 ");
-                }
-                Console.WriteLine();
+            if (x == 5){
+                Console.WriteLine(output);
+                output.Clear();
+                x = 0;
             }
+            output.Append(i);
+            if (x != 4)
+                output.Append(" ");
+            x += 1;
         }
     }
 }

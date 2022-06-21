@@ -4,12 +4,12 @@ class Array
 {
     public static int[] ReplaceElement(int[] array, int index, int n)
     {
-        if (array.Length - 1 < index || index < 0)
+        if (index < 0 || index > array.Length - 1)
         {
             Console.WriteLine("Index out of range");
-            return (array);
+            return array;
         }
         array[index] = n;
-        return (array);
+        return array;
     }
 }

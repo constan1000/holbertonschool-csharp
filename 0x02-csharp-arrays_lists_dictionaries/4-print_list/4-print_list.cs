@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 using System.Collections.Generic;
 
 class List
@@ -8,26 +9,18 @@ class List
         if (size < 0)
         {
             Console.WriteLine("Size cannot be negative");
-            return (null);
+            return null;
         }
-        else if (size == 0)
+        var myList = new List<int>();
+        StringBuilder output = new StringBuilder();
+        for (int i = 0; i < size; i++)
         {
-            Console.WriteLine();
+            myList.Add(i);
+            output.Append(i);
+            if (i != size - 1)
+                output.Append(" ");
         }
-        int i = 0;
-        List<int> Ls = new List<int>();
-        for (i = 0; i < size; i++)
-        { 
-            Ls.Add(i);
-            if (i == size - 1)
-            {
-                Console.WriteLine(Ls[i]);
-            }
-            else
-            {
-                Console.Write(Ls[i] + " ");
-            }
-        }
-        return (Ls);
+        Console.WriteLine(output);
+        return myList;
     }
 }

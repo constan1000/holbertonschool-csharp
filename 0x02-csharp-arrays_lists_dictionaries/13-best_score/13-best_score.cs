@@ -3,18 +3,15 @@ using System.Collections.Generic;
 
 class Dictionary
 {
-    public static string BestScore(Dictionary<string, int> myList)
-    {
-        int x = 0;
-        string best = "None";
-        foreach (var i in myList)
-        {
-            if (i.Value >= x)
-            {
-                x = i.Value;
-                best = i.Key;
+    public static string BestScore(Dictionary<string, int> myList){
+        int max = int.MinValue;
+        string maxKey = "None";
+        foreach(var pair in myList){
+            if (pair.Value > max){
+                max = pair.Value;
+                maxKey = pair.Key; 
             }
         }
-        return (best);
+        return maxKey;
     }
 }

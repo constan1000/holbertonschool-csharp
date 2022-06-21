@@ -3,13 +3,16 @@ using System.Collections.Generic;
 
 class Dictionary
 {
-    public static void PrintSorted(Dictionary<string, string> myDict)
-    {
-        List<string> Ls = new List<string>();
-        foreach (var K in myDict)
-            Ls.Add(K.Key);
-        Ls.Sort();
-        foreach (var i in Ls)
-            Console.WriteLine("{0}: {1}", i, myDict[i]);
+    public static void PrintSorted(Dictionary<string, string> myDict){
+        var myList = new List<string>();
+        var newDict = new Dictionary<string, string>();
+        
+        foreach (var pair in myDict){
+            myList.Add(pair.Key);
+        }
+        myList.Sort();
+        foreach(var key in myList){
+            Console.WriteLine($"{key}: {myDict[key]}");
+        }
     }
 }
